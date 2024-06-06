@@ -4,18 +4,20 @@ avec l'extension platformio de VsCode dans un ESP32.
 Avant de televerser le code il va faloir modifier cette partie du code :
 
 // UUID service et characteristique
+#define DEVICE_NAME                 "iBeacon_1"
 #define SERVICE_UUID                "4fafc201-1fb5-459e-8fcc-c5c9c33191a1"
 #define CHARACTERISTIC_BEACONT_UUID "beb5483e-36e1-4688-b7f5-ea07361b26b1"
 #define CHARACTERISTIC_BEACON1_UUID "beb5483e-36e1-4688-b7f5-ea07361b26c1"
 ...
 
 Il va falloir modifier la fin de tout les services UUID cree en modifiant
-la fin de l'UUID. Pour la premiere balise ils finiront par "1", pour la
-deuxieme ils finiront par "2", etc.
+la fin de l'UUID ainsi que le nom de l'appareil. Pour la premiere balise
+ils finiront par "1", pour la deuxieme ils finiront par "2", etc.
 
 
 Exemple balise 2 :
 // UUID service et characteristique
+#define DEVICE_NAME                 "iBeacon_2"
 #define SERVICE_UUID                "4fafc201-1fb5-459e-8fcc-c5c9c33191a2"
 #define CHARACTERISTIC_BEACONT_UUID "beb5483e-36e1-4688-b7f5-ea07361b26b2"
 #define CHARACTERISTIC_BEACON1_UUID "beb5483e-36e1-4688-b7f5-ea07361b26c2"
@@ -23,6 +25,7 @@ Exemple balise 2 :
 
 Exemple balise 3 :
 // UUID service et characteristique
+#define DEVICE_NAME                 "iBeacon_3"
 #define SERVICE_UUID                "4fafc201-1fb5-459e-8fcc-c5c9c33191a3"
 #define CHARACTERISTIC_BEACONT_UUID "beb5483e-36e1-4688-b7f5-ea07361b26b3"
 #define CHARACTERISTIC_BEACON1_UUID "beb5483e-36e1-4688-b7f5-ea07361b26c3"

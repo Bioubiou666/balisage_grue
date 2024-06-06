@@ -1,3 +1,23 @@
 #include <Arduino.h>
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEServer.h>
 
-//EEE
+#include "BLEManager.h"
+#include "MyServerCallbacks.h"
+
+BLEManager bleManager;
+
+
+
+void setup()
+{
+  bleManager.init();
+}
+
+
+void loop()
+{
+  bleManager.Main();
+}
+
